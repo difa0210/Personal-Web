@@ -3,32 +3,34 @@ body {
     margin: 0px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
-    font-size: large;
+    font-size: larger;
 }
 nav {
     color: azure;
     background: linear-gradient(rgb(6, 109, 134),rgb(0, 62, 78));
     display: flex;
-    height: 7vh;
+    height: 8vh;
 }
-nav .left{
+nav div {
     display: flex;
-    padding-left: 75px;
     align-items: center;
-}
-nav .left li {
+    flex: 50%;
+    }
+nav div.left {
+    padding-left: 120px;
+    }
+nav ul {
+    list-style-type: none;
+    }
+nav ul li {
     display: inline;
-}
-nav .left ul li a {
+    }
+nav ul li a {
+    font-size: x-large;
     color: azure;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bold;
-    font-size: 25px;
-    text-align: center;
     text-decoration: none;
     padding: 30px;
-    transition: 0,3s;
-}
+    }
 nav .left ul li a:hover {
     text-shadow: 0px 0px 10px rgb(255, 0, 149);
     color: rgb(255, 255, 255);
@@ -38,14 +40,11 @@ nav img {
     border-right: 3px solid azure;
     width: 70px; height: 70px;
 }
-nav .right {
+nav div.right {
+    padding-right: 120px;
     display: flex;
-    flex: 50%;
-    padding: 10px;
-    padding-right: 150px;
-    justify-content: right;
-    align-items: center;
-}
+    justify-content: flex-end;
+  }
 nav .right a {
     color: azure;
     background-color: linear-gradient(rgb(6, 109, 134),rgb(0, 62, 78));
@@ -73,13 +72,9 @@ nav .right a:hover {
 .container .section {
     display: flex;
     width: 85%;
-    justify-content: center;
-    text-align: center;
 }
 .container .section .left {
     width: 30%;
-    justify-content: center;
-    text-align: center;
 }
 .container .section .right {
     color: rgb(0, 90, 121);
@@ -87,9 +82,7 @@ nav .right a:hover {
     padding-left: 50px;
     display: flex;
     text-align: left;
-    justify-content: center;
     font-size: larger;
-    margin: 5px;
 }
 
 /* Personal Card */
@@ -121,8 +114,6 @@ nav .right a:hover {
 .bio {
     margin: 15px 0px;
     padding: 0px 30px;
-    text-align: center;
-    justify-content: center;
     font-size: 20px;
 }
 .table {
@@ -152,20 +143,16 @@ nav .right a:hover {
 /* What I Do */
 .skillcontainer {
     display: block;
-    justify-content: center;
     text-align: left;
 }
 .skillcontainer1 {
     display: flex;
-    text-align: left;
-    justify-content: center;
     font-size: large;
     padding: 10px 0px;
 }
 
 /* Container Skill */
 .container .section .right .skill-1, .container .section .right .skill-2, .container .section .right .skill-3 {
-    display: inline-block;
     width: 50%;
     margin-right: 50px;
     text-decoration: none;
@@ -182,11 +169,10 @@ nav .right a:hover {
     transition: 0,6s;
 }
 .container .section .right .skill-1 .judul1:hover, .container .section .right .skill-2 .judul2:hover, .container .section .right .skill-3 .judul3:hover {
-background: rgb(6, 109, 134);
-text-decoration: none;
+    background: rgb(6, 109, 134);
+    text-decoration: none;
 }
 .s1, .s2, .s3 {
-    justify-content: center;
     padding: 0px 10px;
 }
 .a1, .a2, .a3 {
@@ -206,14 +192,11 @@ text-decoration: none;
     background: rgb(6, 109, 134);
 }
 .skillcontainer2 {
-    display: block;
     text-align: center;
-    justify-content: center;
     margin-top: 100px;
 }
 .skillcontainer2 .img{
     display: flex;
-    text-align: center;
     justify-content: center;
 }
 
@@ -225,7 +208,6 @@ text-decoration: none;
     border-radius: 20px;
     background: linear-gradient(rgb(0, 90, 121),rgb(0, 62, 78));
     box-shadow: 0px 0px 5px rgb(0, 39, 53);
-    font-family: 'Times New Roman', Times, serif;
 }
 .contact {
     margin: 10px 0px 15px;

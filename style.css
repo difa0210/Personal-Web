@@ -1,36 +1,36 @@
 body {
-  background: linear-gradient(white, white, azure);
+  background: linear-gradient(white white azure);
   margin: 0px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
-  font-size: large;
+  font-size: larger;
 }
-
-/* Navbar */
 nav {
   color: azure;
   background: linear-gradient(rgb(6, 109, 134),rgb(0, 62, 78));
   display: flex;
-  height: 7vh;
+  height: 8vh;
 }
-nav .left{
+nav div {
   display: flex;
-  padding-left: 75px;
   align-items: center;
-}
-nav .left li {
+  flex: 50%;
+  }
+nav div.left {
+  padding-left: 120px;
+  }
+nav ul {
+  list-style-type: none;
+  }
+nav ul li {
   display: inline;
-}
-nav .left ul li a {
+  }
+nav ul li a {
+  font-size: x-large;
   color: azure;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: bold;
-  font-size: 25px;
-  text-align: center;
   text-decoration: none;
   padding: 30px;
-  transition: 0,3s;
-}
+  }
 nav .left ul li a:hover {
   text-shadow: 0px 0px 10px rgb(255, 0, 149);
   color: rgb(255, 255, 255);
@@ -40,13 +40,10 @@ nav img {
   border-right: 3px solid azure;
   width: 70px; height: 70px;
 }
-nav .right {
+nav div.right {
+  padding-right: 120px;
   display: flex;
-  flex: 50%;
-  padding: 10px;
-  padding-right: 150px;
-  justify-content: right;
-  align-items: center;
+  justify-content: flex-end;
 }
 nav .right a {
   color: azure;
@@ -67,13 +64,17 @@ nav .right a:hover {
 
 /* Blog Form */
 .blog-form {
-  padding: 50px 0;
+  padding: 75px 0;
   display: flex;
   justify-content: center;
 }
 
 .blog-form .form-container {
+  color: rgb(6, 109, 134);
   width: 500px;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 15px black;
 }
 
 .blog-form .form-container h1 {
@@ -82,8 +83,10 @@ nav .right a:hover {
 }
 
 .blog-form form label {
-  font-size: 20px;
-  font-weight: 400;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  margin-left: 10px;
 }
 
 .blog-form form input,
@@ -95,9 +98,9 @@ select {
   padding: 8px;
   margin-top: 5px;
   margin-bottom: 20px;
-  background: #f4f3f3;
-  border: 1px solid #c4c4c4;
-  border-radius: 8px;
+  background: ghostwhite;
+  border: 5px solid rgb(255, 255, 255);
+  border-radius: 10px;
 }
 
 .blog-form form textarea {
@@ -105,20 +108,18 @@ select {
 }
 
 .blog-form form .input-blog-image-group {
-  width: 100%;
   font-size: 20px;
-  font-weight: 400;
   padding: 8px;
   margin-top: 5px;
   margin-bottom: 20px;
-  background: #f4f3f3;
-  border: 1px solid #c4c4c4;
-  border-radius: 8px;
+  background: ghostwhite;
+  border-radius: 10px;
   cursor: pointer;
 }
 
 .blog-form form .input-blog-image-group label p {
   font-size: 15px;
+  opacity: 30%;
 }
 
 .blog-form form .input-blog-image-group label {
@@ -133,18 +134,17 @@ select {
 }
 
 .blog-form form button {
-  margin-top: 50px;
-  padding: 8px 20px;
-  font-size: 17px;
-  background: #ec4d37;
+  padding: 10px 20px;
+  background: linear-gradient(rgb(6, 109, 134),rgb(0, 62, 78));
   border-radius: 8px;
+  font-size: 20px;
   border: none;
-  color: #fff;
+  color: azure;
   cursor: pointer;
 }
 
 .blog hr {
-  border: 1px solid #dbdbdb;
+  border: 1px solid rgb(6, 109, 134);
   width: 80%;
   margin-right: auto;
   margin-left: auto;
@@ -163,7 +163,7 @@ select {
   width: 80%;
   padding: 15px;
   margin-bottom: 20px;
-  border: 2px solid #dbdbdb;
+  border: 2px solid rgb(6, 109, 134);
   border-radius: 8px;
   display: flex;
 }
@@ -192,20 +192,20 @@ select {
   padding: 5px 10px;
   border: 0;
   border-radius: 4px;
-  background: #dbdbdb;
+  background: azure;
 }
 
 .blog .blog-list .btn-group .btn-post {
   padding: 5px 10px;
   border: 0;
   border-radius: 4px;
-  background: #ec4d37;
-  color: #fff;
+  background: linear-gradient(rgb(6, 109, 134),rgb(0, 62, 78));
+  color: azure;
 }
 
 .blog .blog-list h1 a {
   text-decoration: none;
-  color: #000000;
+  color: black;
 }
 
 .blog .blog-list .detail-blog-content {
