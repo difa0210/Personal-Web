@@ -8,7 +8,7 @@
 // Keyword `const` dapat digunakan untuk mendeklarasikan sebuah variable yang bersifat konstan, sehingga nilainya yang sudah disimpan tidak bisa diperbarui.
 // Karena anonymous function kita perlukan nanti, maka kita perlu menyimpan fungsi tersebut ke dalam sebuah variable. Ini dapat kita disebut sebagai function expression.
 // Arrow function merupakan alternatif ringkas (shorthand) dari function expression sebelumnya. Ia tidak memerlukan memerlukan keyword function, melainkan menggunakan simbol => setelah tanda kurung, seperti () =>.
-
+// Mari kita pelajari konsep yang menjelaskan bagaimana variabel melacak hal-hal seperti menambahkan atau mengurangi nilai. Nama konsep tersebut adalah self-assigning variable.
 
 // Array pada Javascript adalah variabel yang berisi banyak nilai (item).
 let blogs = []
