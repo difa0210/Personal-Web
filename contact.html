@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Form</title>
+        <link rel="stylesheet" href="style-form.css">
+
+    </head>
+    <body>
+        <nav>
+
+            <div class="left"> <a href="file:///D:/File%20Dipa%20Udin/Dumbways%20-%201/Day%204%20-%20Form%20Submission/Personal%20Web.html">
+                <img src="https://mir-s3-cdn-cf.behance.net/user/276/383ad1449241267.614b4c0f85018.jpg" alt="My Logo">
+                </a>
+            <ul>
+                <li>
+                    <a href="file:///D:/File%20Dipa%20Udin/Dumbways%20-%201/Day%204%20-%20Form%20Submission/Personal%20Web.html">Home</a>
+                </li>
+                <li>
+                    <a href="blog.html">Blog</a>
+                </li>
+            </ul>
+            </div>
+    
+            <div class="right">
+            <a href="D:\File Dipa Udin\Dumbways - 1\Day 4 - Form Submission\contact.html">Contact Me</a>
+            </div>
+        </nav>
+
+        <form class="form">
+    
+            <div class="contact">
+                <label> Contact Form
+                </label>
+            </div>
+
+            <div class="name">
+            <label for="input-name" class="labelform">Name</label>
+            <input class="namename"
+            id="input-name"
+            type="text"
+            placeholder="Type your name">
+            </div>
+            
+    
+            <div class="email">
+            <label for="input-email" class="labelform">e-Mail</label>
+            <input class="emailemail"
+            id="input-email"
+            type="email"
+            placeholder="Type your email">
+            </div>
+        
+            <div class="phone">
+            <label for="input-number" class="labelform">Phone Number</label>
+            <input class="phonephone"
+            id="input-number" 
+            type="number"
+            placeholder="Type your phone number">
+            </div>
+
+            <!-- <input type="color">
+            <input type="date">
+            <input type="file">
+            <input type="password"> -->
+
+            <div class="subject">
+                <label
+                for="input-subject" class="labelform"> Subject </label>
+                <select class="subjectsubject"
+                id="input-subject">
+                    <option value=""></option>
+                    <option> I'm Hiring </option>
+                    <option> Problem With Our Side </option>
+                </select>
+            </div>
+
+            <div>
+                <label class="skills" class="labelform"> Skills </label> 
+
+                <br>
+
+                <input 
+                id="input-programming"
+                type="checkbox"
+                name="hobi1"
+                value="Programming"
+                class="checkmark">
+                <label for="input-programming" class="containers"> Programming </label>
+
+                <br>
+
+                <input
+                id="input-football"
+                type="checkbox"
+                name="hobi2"
+                value="Football"
+                class="checkmark">
+                <label for="input-football" class="containers"> Football </label>
+                     
+                <br>
+
+                <input 
+                id="input-sleep"
+                type="checkbox"
+                name="hobi3"
+                value="Sleep"
+                class="checkmark">
+                <label for="input-sleep" class="containers"> Sleep </label>
+            </div>
+            
+            <div class="message">
+            <label
+            for="input-message" class="labelform"> Message </label>
+            <textarea
+            class="messagemessage"
+            id="input-message"
+            name="input-message"
+            cols="1"
+            rows="1"> </textarea>
+            
+            </div>
+
+            <button
+            class="buttons"
+            type="button"
+            onclick="submitData()"> Submit </button> 
+        </form>  
+        <script src="form.js"></script>
+    </body>
+
+</html>
