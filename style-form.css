@@ -9,7 +9,7 @@ nav {
     color: azure;
     background: linear-gradient(rgb(6, 109, 134),rgb(0, 62, 78));
     display: flex;
-    height: 8vh;
+    height: 7vh;
 }
 nav div {
     display: flex;
@@ -39,6 +39,7 @@ nav img {
     border-left: 3px solid azure;
     border-right: 3px solid azure;
     width: 70px; height: 70px;
+    
 }
 nav div.right {
     padding-right: 120px;

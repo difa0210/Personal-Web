@@ -9,7 +9,7 @@ nav {
   color: azure;
   background: linear-gradient(rgb(6, 109, 134),rgb(0, 62, 78));
   display: flex;
-  height: 8vh;
+  height: 7vh;
 }
 nav div {
   display: flex;
@@ -64,8 +64,9 @@ nav .right a:hover {
 
 /* Blog Form */
 .blog-form {
-  padding: 75px 0;
+  height: 97vh;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
@@ -110,7 +111,7 @@ select {
 .blog-form form .input-blog-image-group {
   font-size: 20px;
   padding: 8px;
-  margin-top: 5px;
+  margin-top: 10px;
   margin-bottom: 20px;
   background: ghostwhite;
   border-radius: 10px;
