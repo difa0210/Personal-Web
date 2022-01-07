@@ -25,8 +25,8 @@
 //  6. Kemudian buat sebuah array let blogs yang berfungsi hanya untuk menampung seluruh data blog yang di push.
 //  7. Kemudian buat method push untuk memasukkan data yang ada di dalam object blog ke blogs.
 //  8. Lalu buat looping(pengulangan) untuk menampung pengulangan data dari blogs[i].
-//  9. 
-
+//  9. Kemudian buat function untuk merubah content di blog html menggunakan innerHTML yang berfungsi membuat elemen html baru.
+// 10. Lalu isi inner html dengan string kosong agar ketika memposting blog baru maka blog yang lama akan hilang.
 
 // Array pada Javascript adalah variabel yang berisi banyak nilai (item).
 let blogs = []
@@ -52,26 +52,24 @@ function addBlog(event) {
         author: "Hafidzuddin Difa",
         postAt: new Date()
     }
-
     // method push() menambah satu atau lebih elemen ke akhir sebuah array.
     blogs.push(blog)
 
     console.log(blogs);
-
-    // Looping pada javascript digunakan untuk melakukan tugas berulang berdasarkan suatu kondisi
+    //hanya untuk melihat index blogs di console
     for (let i = 0; i < blogs.length; i++) {
-    console.log(blogs[i]);
+        console.log(blogs[i]);
+    }
 
     renderBlog()
-    }
 }
 
-// Manipulation HTML
+
 function renderBlog() {
     let contentContainer = document.getElementById("contents")
-
+    // Manipulation HTML
     contentContainer.innerHTML = ""
-
+    // Looping pada javascript digunakan untuk melakukan tugas berulang berdasarkan suatu kondisi
     for (let i = 0; i < blogs.length; i++) {
 
     contentContainer.innerHTML += 
@@ -81,22 +79,22 @@ function renderBlog() {
             </div>
             <div class="blog-content">
                 <div class="btn-group">
-                <button class="btn-edit">Edit Post</button>
-                <button class="btn-post">Post Blog</button>
+                    <button class="btn-edit">Edit Post</button>
+                    <button class="btn-post">Post Blog</button>
                 </div>
                 <h1>
-                <a href=""blog-detail.html" target="_blank"
-                    >${blogs[i].title}</a
-                >
+                    <a href=""blog-detail.html" target="_blank">
+                    ${blogs[i].title}
+                    </a>
                 </h1>
                 <div class="detail-blog-content">
-                ${getFullTime(blogs[i].postAt)} | ${blogs[i].author}
+                    ${getFullTime(blogs[i].postAt)} | ${blogs[i].author}
                 </div>
                 <p>
-                "${blogs[i].content}"
+                    "${blogs[i].content}"
                 </p>
                 <div style="text-align: right;">
-                <span >${getDistanceTime(blogs[i].postAt)}</span>
+                    <span >${getDistanceTime(blogs[i].postAt)}</span>
                 </div>
             </div>
         </div>`

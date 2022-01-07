@@ -68,14 +68,18 @@ nav .right a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 50px;
 }
 
 .blog-form .form-container {
-  color: rgb(6, 109, 134);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
   width: 500px;
   padding: 30px;
   border-radius: 20px;
-  box-shadow: 0px 0px 15px black;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(rgb(0, 90, 121),rgb(0, 62, 78));
+  box-shadow: 0px 0px 5px rgb(0, 39, 53);
 }
 
 .blog-form .form-container h1 {
@@ -84,20 +88,23 @@ nav .right a:hover {
 }
 
 .blog-form form label {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: bold;
-  font-size: 25px;
-  margin-left: 10px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.blog-form form label:hover {
+  text-shadow: 0px 0px 10px rgb(255, 0, 149);
+  color: rgb(255, 255, 255);
 }
 
 .blog-form form input,
 textarea,
 select {
   width: 100%;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 400;
-  padding: 8px;
-  margin-top: 5px;
+  padding: 10px;
+  margin-top: 15px;
   margin-bottom: 20px;
   background: ghostwhite;
   border: 5px solid rgb(255, 255, 255);
@@ -119,8 +126,9 @@ select {
 }
 
 .blog-form form .input-blog-image-group label p {
+  padding-left: 20px;
   font-size: 15px;
-  opacity: 30%;
+  color: rgb(170, 170, 170);
 }
 
 .blog-form form .input-blog-image-group label {
@@ -131,17 +139,26 @@ select {
 }
 
 .blog-form form .button-group {
-  text-align: right;
+  text-align: left;
 }
 
 .blog-form form button {
-  padding: 10px 20px;
+  margin-top: 15px;
+  border-radius: 10px;
+  padding: 10px 15px;
+  color: ghostwhite;
+  border: 3px solid ghostwhite;
   background: linear-gradient(rgb(6, 109, 134),rgb(0, 62, 78));
-  border-radius: 8px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
   font-size: 20px;
-  border: none;
-  color: azure;
   cursor: pointer;
+  transition: 0,5s;
+}
+
+.blog-form form button:hover {
+  background: azure;
+  color: rgb(0, 62, 78);
 }
 
 .blog hr {
