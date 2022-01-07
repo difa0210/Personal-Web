@@ -168,6 +168,6 @@ function getDistanceTime(time) {
     }
 }
 //Untuk mengatur jarak eksekusi code yang sudah ditentukan
-setInterval(() => {
-    renderBlog()
-}, 3000)
+// setInterval(() => {
+//     renderBlog()
+// }, 3000)
