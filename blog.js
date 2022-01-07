@@ -27,6 +27,9 @@
 //  8. Lalu buat looping(pengulangan) untuk menampung pengulangan data dari blogs[i].
 //  9. Kemudian buat function untuk merubah content di blog html menggunakan innerHTML yang berfungsi membuat elemen html baru.
 // 10. Lalu isi inner html dengan string kosong agar ketika memposting blog baru maka blog yang lama akan hilang.
+// 11. Kemudian isi title, content, image di dalam innerHTML dari data blogs[i].
+
+
 
 // Array pada Javascript adalah variabel yang berisi banyak nilai (item).
 let blogs = []
