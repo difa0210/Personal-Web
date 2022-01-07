@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-       
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Contact Form</title>
         <link rel="stylesheet" href="style-form.css">
-
     </head>
+
     <body>
         <nav>
             <div class="left">
                 <a href="index.html">
-                <img src="assets\Logo difa-01-01.jpg" alt="My Logo">
+                    <img src="assets\Logo difa-01-01.jpg" alt="My Logo">
                 </a>
             <ul>
                 <li>
@@ -22,50 +22,42 @@
             </ul>
             </div>
             <div class="right">
-            <a href="contact.html">Contact Me</a>
+                <a href="contact.html">Contact Me</a>
             </div>
         </nav>
 
         <form class="form">
     
             <div class="contact">
-                <label> Contact Form
-                </label>
+                <label> Contact Form</label>
             </div>
 
             <div class="name">
-            <label for="input-name" class="labelform">Name</label>
-            <input class="namename"
-            id="input-name"
-            type="text"
-            placeholder="Type your name">
+                <label for="input-name" class="labelform">Name</label>
+                <input class="namename"
+                id="input-name"
+                type="text"
+                placeholder="Type your name">
             </div>
             
-    
             <div class="email">
-            <label for="input-email" class="labelform">e-Mail</label>
-            <input class="emailemail"
-            id="input-email"
-            type="email"
-            placeholder="Type your email">
+                <label for="input-email" class="labelform">e-Mail</label>
+                <input class="emailemail"
+                id="input-email"
+                type="email"
+                placeholder="Type your email">
             </div>
         
             <div class="phone">
-            <label for="input-number" class="labelform">Phone Number</label>
-            <input class="phonephone"
-            id="input-number" 
-            type="number"
-            placeholder="Type your phone number">
+                <label for="input-number" class="labelform">Phone Number</label>
+                <input class="phonephone"
+                id="input-number" 
+                type="number"
+                placeholder="Type your phone number">
             </div>
 
-            <!-- <input type="color">
-            <input type="date">
-            <input type="file">
-            <input type="password"> -->
-
             <div class="subject">
-                <label
-                for="input-subject" class="labelform"> Subject </label>
+                <label for="input-subject" class="labelform"> Subject </label>
                 <select class="subjectsubject"
                 id="input-subject">
                     <option value=""></option>
@@ -109,23 +101,23 @@
             </div>
             
             <div class="message">
-            <label
-            for="input-message" class="labelform"> Message </label>
-            <textarea
-            class="messagemessage"
-            id="input-message"
-            name="input-message"
-            cols="1"
-            rows="1"> </textarea>
-            
+                <label
+                for="input-message" class="labelform"> Message </label>
+                <textarea
+                class="messagemessage"
+                id="input-message"
+                name="input-message"
+                cols="1"
+                rows="1">
+                </textarea>
             </div>
 
             <button
-            class="buttons"
-            type="button"
-            onclick="submitData()"> Submit </button> 
+                class="buttons"
+                type="button"
+                onclick="submitData()"> Submit
+            </button> 
         </form>  
         <script src="form.js"></script>
     </body>
-
 </html>

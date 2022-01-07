@@ -9,6 +9,24 @@
 // Karena anonymous function kita perlukan nanti, maka kita perlu menyimpan fungsi tersebut ke dalam sebuah variable. Ini dapat kita disebut sebagai function expression.
 // Arrow function merupakan alternatif ringkas (shorthand) dari function expression sebelumnya. Ia tidak memerlukan memerlukan keyword function, melainkan menggunakan simbol => setelah tanda kurung, seperti () =>.
 // Mari kita pelajari konsep yang menjelaskan bagaimana variabel melacak hal-hal seperti menambahkan atau mengurangi nilai. Nama konsep tersebut adalah self-assigning variable.
+// Penugasan diri (self-assignment) adalah ketika kita menetapkan sebuah variable ke nilainya sendiri.
+// Operator increment, ++, ditempatkan setelah nama variable, menambahkan nilainya sebesar 1.
+// Hoisting merupakan mekanisme JavaScript dimana seluruh deklarasi variabel dan fungsi dipindahkan ke bagian atas ruang lingkupnya. Hal ini berarti bahwa di mana pun variabel dan fungsi dideklarasikan, mereka dipindahkan ke paling atas cakupannya.
+// Variabel yang dideklarasikan dengan keyword let dan const diangkat ke atas blok, namun tidak diinisialisasi.
+// Artinya blok kode mengetahui variabel, tetapi tidak dapat digunakan sampai telah dideklarasikan.
+// Scope adalah istilah yang digunakan untuk memaksudkan visibilitas variabel. Di JavaScript ada dua jenis scope yaitu global scope, local atau function scope dan block scope.
+
+//  Ketika onSubmit di klik maka addBlog akan dijalankan.
+//  1. Kemudian jalankan function yang berfungsi sebagai blok kode untuk membungkus suatu proses agar penulisan kode yang sama tidak ditulis secara berulang, dan bisa digunakan berkali-kali dengan menambah atau mengubah argumennya.
+//  2. Lalu buat preventDefault() yang berguna untuk mencegah halaman browser melakukan reload.
+//  3. Kemudian buat variabel untuk mengambil inputan nilai dari elemen html menggunakan id.
+//  4. Lalu createObjectURL untuk membuat URL pada objek (image) agar bisa ditampilkan. Data yang didapat di encode yang bisa dilihat dari index di console.
+//  5. Lalu buat object untuk menampung beberapa data yang menyimpan nilai(property & Key).
+//  6. Kemudian buat sebuah array let blogs yang berfungsi hanya untuk menampung seluruh data blog yang di push.
+//  7. Kemudian buat method push untuk memasukkan data yang ada di dalam object blog ke blogs.
+//  8. Lalu buat looping(pengulangan) untuk menampung pengulangan data dari blogs[i].
+//  9. 
+
 
 // Array pada Javascript adalah variabel yang berisi banyak nilai (item).
 let blogs = []
@@ -35,14 +53,14 @@ function addBlog(event) {
         postAt: new Date()
     }
 
-// method push() menambah satu atau lebih elemen ke akhir sebuah array.
+    // method push() menambah satu atau lebih elemen ke akhir sebuah array.
     blogs.push(blog)
 
-    console.log(blogs)
+    console.log(blogs);
 
-// Looping pada javascript digunakan untuk melakukan tugas berulang berdasarkan suatu kondisi
+    // Looping pada javascript digunakan untuk melakukan tugas berulang berdasarkan suatu kondisi
     for (let i = 0; i < blogs.length; i++) {
-        console.log(blogs[i]);
+    console.log(blogs[i]);
 
     renderBlog()
     }
@@ -56,30 +74,31 @@ function renderBlog() {
 
     for (let i = 0; i < blogs.length; i++) {
 
-    contentContainer.innerHTML += `<div class="blog-list-item">
-        <div class="blog-image">
-            <img src=${blogs[i].image} alt="" />
-        </div>
-        <div class="blog-content">
-            <div class="btn-group">
-            <button class="btn-edit">Edit Post</button>
-            <button class="btn-post">Post Blog</button>
+    contentContainer.innerHTML += 
+        `<div class="blog-list-item">
+            <div class="blog-image">
+                <img src=${blogs[i].image} alt="" />
             </div>
-            <h1>
-            <a href=""blog-detail.html" target="_blank"
-                >${blogs[i].title}</a
-            >
-            </h1>
-            <div class="detail-blog-content">
-            ${getFullTime(blogs[i].postAt)} | ${blogs[i].author}
+            <div class="blog-content">
+                <div class="btn-group">
+                <button class="btn-edit">Edit Post</button>
+                <button class="btn-post">Post Blog</button>
+                </div>
+                <h1>
+                <a href=""blog-detail.html" target="_blank"
+                    >${blogs[i].title}</a
+                >
+                </h1>
+                <div class="detail-blog-content">
+                ${getFullTime(blogs[i].postAt)} | ${blogs[i].author}
+                </div>
+                <p>
+                "${blogs[i].content}"
+                </p>
+                <div style="text-align: right;">
+                <span >${getDistanceTime(blogs[i].postAt)}</span>
+                </div>
             </div>
-            <p>
-            "${blogs[i].content}"
-            </p>
-            <div style="text-align: right;">
-              <span >${getDistanceTime(blogs[i].postAt)}</span>
-            </div>
-        </div>
         </div>`
     }
 }
