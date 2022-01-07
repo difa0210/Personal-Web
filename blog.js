@@ -41,8 +41,8 @@ function addBlog(event) {
     console.log(blogs)
 
 // Looping pada javascript digunakan untuk melakukan tugas berulang berdasarkan suatu kondisi
-for (let i = 0; i < blogs.length; i++) {
-    console.log(blogs[i]);
+    for (let i = 0; i < blogs.length; i++) {
+        console.log(blogs[i]);
 
     renderBlog()
     }
@@ -89,11 +89,11 @@ let month = ["January","February","March","April","May","June","July","August","
 function getFullTime(time) {
     console.log(time);
 
-function addZero(i) {
-    if (i < 10) {i = "0" + i}
+    function addZero(i) {
+        if (i < 10) {i = "0" + i}
 
     // Untuk mengembalikan sesuatu dari sebuah fungsi, kita menambahkan return keyword diikuti oleh nilai yang ingin dikembalikan.
-    return i;
+        return i;
     }
 
     let date = time.getDate()
@@ -147,7 +147,7 @@ function getDistanceTime(time) {
     return `${distanceSeconds} seconds ago`;
     }
 }
-
+//Untuk mengatur jarak eksekusi code yang sudah ditentukan
 setInterval(() => {
     renderBlog()
 }, 3000)
