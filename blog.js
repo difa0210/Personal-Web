@@ -19,18 +19,21 @@
 
 
 //  Ketika onSubmit di klik maka addBlog akan dijalankan.
-//  1. Kemudian di dalam function addBlog() yang berfungsi sebagai blok kode untuk membungkus suatu proses agar penulisan kode yang sama tidak ditulis secara berulang, dan bisa digunakan berkali-kali dengan menambah atau mengubah argumennya.
+//  1. Kemudian di dalam function addBlog() yang berfungsi sebagai blok kode untuk membungkus suatu proses agar penulisan kode yang sama tidak      //     ditulis secara berulang, dan bisa digunakan berkali-kali dengan menambah atau mengubah argumennya.
 //  2. Lalu buat .preventDefault() yang berguna untuk mencegah halaman browser melakukan reload.
 //  3. Kemudian buat variabel untuk mengambil inputan nilai dari elemen html menggunakan id.
-//  4. Lalu createObjectURL untuk membuat URL pada objek (image) agar bisa ditampilkan. Data yang didapat di encode yang bisa dilihat dari index di console.
+//  4. Lalu createObjectURL untuk membuat URL pada objek (image) agar bisa ditampilkan.
+//     Data yang didapat di encode yang bisa dilihat dari index di console.
 //  5. Lalu buat object untuk menampung beberapa data yang menyimpan nilai(property & Key).
 //  6. Kemudian buat sebuah array let blogs yang berfungsi hanya untuk menampung seluruh data blog yang di push.
 //  7. Kemudian buat method push untuk memasukkan data yang ada di dalam object blog ke blogs.
 //  8. Lalu buat looping(pengulangan) untuk menampung pengulangan data dari blogs[i].
 //  9. Kemudian buat function untuk merubah content di blog html menggunakan innerHTML yang berfungsi membuat elemen html baru.
 // 10. Lalu isi inner html dengan string kosong agar ketika memposting blog baru maka blog yang lama akan hilang.
-// 11. Kemudian isi title, content, image, author di dalam innerHTML dari data blogs[i] dan blog.html.
-// 12. Untuk membuat getFullTime dan getDistanceTime, buat sebuah function lagi.
+// 11. Kemudian isi title, content, image, author, PostAt di dalam innerHTML dari data blogs[i] dan blog.html.
+// 12. Untuk PostAt blog content, berisikan newDate() yang dipecahkan/diubah formatnya menggunakan function getFullTime.
+// 13. Untuk PostAt jarak waktu postBlog dan waktu sekarang, berisikan newDate() yang diubah formatnya menggunakan function getDistanceTime.
+// 14. Terakhir buat setInterval() untuk mengatur jarak eksekusi code renderBlog().
 
 
 
@@ -63,7 +66,7 @@ function addBlog(event) {
 
     console.log(blogs);
 
-    //hanya untuk melihat index blogs di console
+    //hanya untuk melihat index blogs di console.
     for (let i = 0; i < blogs.length; i++) {
         console.log(blogs[i]);
     }
@@ -75,10 +78,10 @@ function addBlog(event) {
 function renderBlog() {
     let contentContainer = document.getElementById("contents")
 
-    // Manipulation HTML
+    // Manipulation HTML.
     contentContainer.innerHTML = ""
 
-    // Looping pada javascript digunakan untuk melakukan tugas berulang berdasarkan suatu kondisi
+    // Looping pada javascript digunakan untuk melakukan tugas berulang berdasarkan suatu kondisi.
     for (let i = 0; i < blogs.length; i++) {
 
     contentContainer.innerHTML += 
@@ -107,10 +110,11 @@ function renderBlog() {
                 </div>
             </div>
         </div>`
+        // Backtick agar tidak perlu menggunakan konkatenasi.
     }
 }
 
-// Count post blog time untuk menampilkan waktu saat kita memposting 
+// Count post blog time untuk menampilkan waktu saat kita memposting blog.
 let month = ["January","February","March","April","May","June","July","August","September","October","November","Desember"]
 
 function getFullTime(time) {
@@ -141,8 +145,8 @@ function getFullTime(time) {
     let fullTime = `${date} ${month[monthIndex]} ${year} ${hours}:${minutes} WIB`
     return fullTime
 }
-getFullTime(new Date())
 
+// Untuk mengatur jarak waktu sekarang dan waktu post blog.
 function getDistanceTime(time) {
 
     let timePost = time
@@ -150,17 +154,17 @@ function getDistanceTime(time) {
 
     let distance = timeNow - timePost
 
-    let miliSecond = 1000
-    let secondInHours = 3600
-    let hoursInDay = 23
+    let miliSecond = 1000 // 1 Second = 1000 milisecond.
+    let secondInHours = 3600 // 1 Hours = 3600 second.
+    let hoursInDay = 23 // 1 Day = 23 Hours because if you write 24, 24 = 00.
     let minutes = 60
     let second = 60
 
     // fungsi math.floor() pada javascript adalah sebuah fungsi untuk mengembalikan nilai menjadi bilangan bulat dari yang terbesar kurang dari atau sama dengan.
-    let distanceDay = Math.floor (distance / (miliSecond * secondInHours * hoursInDay)) // menampilkan hari
-    let distanceHours = Math.floor (distance / (miliSecond * minutes * second)) // menampilkan jam
-    let distanceMinutes = Math.floor (distance / (miliSecond * minutes)) // menampilkan menit
-    let distanceSeconds = Math.floor (distance / miliSecond) // menampilkan detik
+    let distanceDay = Math.floor (distance / (miliSecond * secondInHours * hoursInDay)) // menampilkan hari.
+    let distanceHours = Math.floor (distance / (miliSecond * minutes * second)) // menampilkan jam.
+    let distanceMinutes = Math.floor (distance / (miliSecond * minutes)) // menampilkan menit.
+    let distanceSeconds = Math.floor (distance / miliSecond) // menampilkan detik.
 
     if (distanceDay >= 1) {
     return `${distanceDay} day ago`;
