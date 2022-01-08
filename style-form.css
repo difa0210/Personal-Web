@@ -208,11 +208,13 @@ text-decoration: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
     width: 400px;
-    margin: 80px auto;
+    height: 90vh;
+    margin: 5% auto;
     padding: 30px;
     border-radius: 20px;
     background: linear-gradient(rgb(0, 90, 121),rgb(0, 62, 78));
     box-shadow: 0px 0px 5px rgb(0, 39, 53);
+    
 }
 .contact {
     margin: 10px 0px 15px;
