@@ -1,3 +1,4 @@
+// Switch case menerima parameter berupa ekspresi yang nanti akan kita evaluasi berdasarkan kondisi yang diinginkan.
 // Undefined merupakan tipe data dimana variable yang dideklarasikan belum ada nilai sama sekali atau variable tersebut bernilai undefined (tanpa tanda kutip).
 // Null merupakan tipe data dimana nilainya hanya null yang dalam artian "tidak ada".
 // Boolean merupakan tipe data dimana nilainya hanya berupa true atau false. Tipe ini sangat berguna ketika kita ingin melakukan seleksi kondisi.
