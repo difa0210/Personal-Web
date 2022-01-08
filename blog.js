@@ -16,9 +16,11 @@
 // Artinya blok kode mengetahui variabel, tetapi tidak dapat digunakan sampai telah dideklarasikan.
 // Scope adalah istilah yang digunakan untuk memaksudkan visibilitas variabel. Di JavaScript ada dua jenis scope yaitu global scope, local atau function scope dan block scope.
 
+
+
 //  Ketika onSubmit di klik maka addBlog akan dijalankan.
-//  1. Kemudian jalankan function yang berfungsi sebagai blok kode untuk membungkus suatu proses agar penulisan kode yang sama tidak ditulis secara berulang, dan bisa digunakan berkali-kali dengan menambah atau mengubah argumennya.
-//  2. Lalu buat preventDefault() yang berguna untuk mencegah halaman browser melakukan reload.
+//  1. Kemudian di dalam function addBlog() yang berfungsi sebagai blok kode untuk membungkus suatu proses agar penulisan kode yang sama tidak ditulis secara berulang, dan bisa digunakan berkali-kali dengan menambah atau mengubah argumennya.
+//  2. Lalu buat .preventDefault() yang berguna untuk mencegah halaman browser melakukan reload.
 //  3. Kemudian buat variabel untuk mengambil inputan nilai dari elemen html menggunakan id.
 //  4. Lalu createObjectURL untuk membuat URL pada objek (image) agar bisa ditampilkan. Data yang didapat di encode yang bisa dilihat dari index di console.
 //  5. Lalu buat object untuk menampung beberapa data yang menyimpan nilai(property & Key).
@@ -27,7 +29,8 @@
 //  8. Lalu buat looping(pengulangan) untuk menampung pengulangan data dari blogs[i].
 //  9. Kemudian buat function untuk merubah content di blog html menggunakan innerHTML yang berfungsi membuat elemen html baru.
 // 10. Lalu isi inner html dengan string kosong agar ketika memposting blog baru maka blog yang lama akan hilang.
-// 11. Kemudian isi title, content, image di dalam innerHTML dari data blogs[i].
+// 11. Kemudian isi title, content, image, author di dalam innerHTML dari data blogs[i] dan blog.html.
+// 12. Untuk membuat getFullTime dan getDistanceTime, buat sebuah function lagi.
 
 
 
@@ -59,6 +62,7 @@ function addBlog(event) {
     blogs.push(blog)
 
     console.log(blogs);
+
     //hanya untuk melihat index blogs di console
     for (let i = 0; i < blogs.length; i++) {
         console.log(blogs[i]);
@@ -70,8 +74,10 @@ function addBlog(event) {
 
 function renderBlog() {
     let contentContainer = document.getElementById("contents")
+
     // Manipulation HTML
     contentContainer.innerHTML = ""
+
     // Looping pada javascript digunakan untuk melakukan tugas berulang berdasarkan suatu kondisi
     for (let i = 0; i < blogs.length; i++) {
 
@@ -104,6 +110,7 @@ function renderBlog() {
     }
 }
 
+// Count post blog time untuk menampilkan waktu saat kita memposting 
 let month = ["January","February","March","April","May","June","July","August","September","October","November","Desember"]
 
 function getFullTime(time) {
@@ -149,6 +156,7 @@ function getDistanceTime(time) {
     let minutes = 60
     let second = 60
 
+    // fungsi math.floor() pada javascript adalah sebuah fungsi untuk mengembalikan nilai menjadi bilangan bulat dari yang terbesar kurang dari atau sama dengan.
     let distanceDay = Math.floor (distance / (miliSecond * secondInHours * hoursInDay)) // menampilkan hari
     let distanceHours = Math.floor (distance / (miliSecond * minutes * second)) // menampilkan jam
     let distanceMinutes = Math.floor (distance / (miliSecond * minutes)) // menampilkan menit
