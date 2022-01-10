@@ -38,23 +38,20 @@
 
 
 
-// Array pada Javascript adalah variabel yang berisi banyak nilai (item).
+
 let blogs = []
 
-//function di javascript adalah sebuah blok kode yang digunakan untuk membungkus suatu proses dengan tujuan agar penulisan kode atau proses yang sama tidak ditulis secara berulang kali.
+
 function addBlog(event) {
 
-    //event.preventDefault() adalah sebuah method yang berfungsi untuk mencegah terjadinya event bawaan dari sebuah DOM, misalnya tag "a href" jika kita klik, maka halaman browser akan melakukan reload, atau sebuah form jika kita klik tombol submit maka akan melakukan reload pula.
     event.preventDefault()
 
     let title = document.getElementById("input-blog-title").value
     let content = document.getElementById("input-blog-content").value
     let image = document.getElementById("input-blog-image").files
 
-        // Kita dapat membuat URL objek dan mengaturnya sebagai atribut src dari berbagai elemen untuk ditampilkan atau dimainkan. Ia bekerja dengan gambar, audio, dan video di sebagian besar browser.
         image = URL.createObjectURL(image[0])
-
-    // Objek merupakan tipe data yang terdiri dari sekumpulan properti, dan properti adalah hubungan antara nama dan nilai, yang dipisahkan dengan simbol : (titik dua).
+   
     let blog = {
         title: title,
         content: content,
@@ -62,7 +59,7 @@ function addBlog(event) {
         author: "Hafidzuddin Difa",
         postAt: new Date()
     }
-    // method push() menambah satu atau lebih elemen ke akhir sebuah array.
+    
     blogs.push(blog)
 
     console.log(blogs);
@@ -79,10 +76,8 @@ function addBlog(event) {
 function renderBlog() {
     let contentContainer = document.getElementById("contents")
 
-    // Manipulation HTML.
     contentContainer.innerHTML = ""
 
-    // Looping pada javascript digunakan untuk melakukan tugas berulang berdasarkan suatu kondisi.
     for (let i = 0; i < blogs.length; i++) {
 
     contentContainer.innerHTML += 
@@ -111,7 +106,6 @@ function renderBlog() {
                 </div>
             </div>
         </div>`
-        // Backtick agar tidak perlu menggunakan konkatenasi.
     }
 }
 
@@ -124,7 +118,6 @@ function getFullTime(time) {
     function addZero(i) {
         if (i < 10) {i = "0" + i}
 
-    // Untuk mengembalikan sesuatu dari sebuah fungsi, kita menambahkan return keyword diikuti oleh nilai yang ingin dikembalikan.
         return i;
     }
 
@@ -161,7 +154,6 @@ function getDistanceTime(time) {
     let minutes = 60
     let second = 60
 
-    // fungsi math.floor() pada javascript adalah sebuah fungsi untuk mengembalikan nilai menjadi bilangan bulat dari yang terbesar kurang dari atau sama dengan.
     let distanceDay = Math.floor (distance / (miliSecond * secondInHours * hoursInDay)) // menampilkan hari.
     let distanceHours = Math.floor (distance / (miliSecond * minutes * second)) // menampilkan jam.
     let distanceMinutes = Math.floor (distance / (miliSecond * minutes)) // menampilkan menit.
