@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 a {
   color: black !important;
 }
@@ -37,7 +41,8 @@ a {
 }
 
 .products {
-  height: 75vh;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
   padding-left: 2%;
   padding-right: 2%;
 }
