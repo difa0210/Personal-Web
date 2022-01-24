@@ -1,61 +1,70 @@
 a {
-    color: black !important;
+  color: black !important;
 }
 
 .border-a {
-    border: 1px solid #740A76;
-    border-radius: 5px;
+  border: 1px solid #740a76;
+  border-radius: 5px;
 }
 
 .border-b {
-    background-color: #740A76;
-    border: 1px solid #740A76;
-    border-radius: 5px;
-    color: white !important;
+  background-color: #740a76;
+  border: 1px solid #740a76;
+  border-radius: 5px;
+  color: white !important;
 }
 
 .align {
-    display: flex;
-    align-items: center !important;
+  display: flex;
+  align-items: center !important;
 }
 
 .justify {
-    display: flex;
-    justify-content: center !important;
+  display: flex;
+  justify-content: center !important;
 }
 
 .me {
-    margin-right: 10%;
+  margin-right: 10%;
 }
 
 .mt {
-    margin-top: 4%;
+  margin-top: 4%;
 }
 
 .container-a {
-    height: 95vh;
-    width: 90vw;
+  width: 90vw;
 }
 
 .products {
-    height: 70vh;
+  height: 75vh;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 .border-button-a {
-    text-decoration: none;
-    background-color: #740A76;
-    border: 1px solid #740A76;
-    border-radius: 5px;
-    color: white !important;
+  text-decoration: none;
+  background-color: #740a76;
+  border: 1px solid #740a76;
+  border-radius: 5px;
+  color: white !important;
 }
 
 .border-button-b {
-    text-decoration: none;
-    background-color: white;
-    border: none;
-    border-radius: 5px;
+  text-decoration: none;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
 }
 
 .text-purple {
-    color: #740A76 !important;
+  color: #740a76 !important;
+}
+
+.bg-purple {
+  background-color: #740a76 !important;
+}
+
+.rounded-x {
+  border-radius: 2rem;
 }
