@@ -1,30 +1,14 @@
-html, body {
-    font-size: 1rem;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    box-sizing: border-box;
-    margin: 0;
-    overflow-x: hidden;
-    top: 0;
-    left: 0;
-}
-
-ul {
+/* ul {
+    background-color: white;
     list-style-type: none !important;
 }
 
-a { 
-    text-decoration: none !important;
-    color: black !important;
-}
 
-a:hover {
-    color: #740a76 !important;
-}
+
+
 
 .navbar {
-    padding: 1rem 2rem;
-    height: 0rem;
-    min-height: 12vh;
+    min-height: 9vh;
     margin-bottom: 1rem;
 }
 
@@ -33,33 +17,16 @@ a:hover {
 }
 
 .navbar .navbar-brand a {
-    padding: 1rem 0;
     display: block;
     text-decoration: none;
 }
 
-.navbar-toggler {
-    border: none;
-}
 
-.navbar-toggler span {
-    width: 35px;
-    height: 4px;
-    border: 1px;
-    display: block;
-    background: #740a76;
-    margin: 8px;
-}
 
 .navbar-expand-lg .navbar-nav .nav-link {
-    padding: 0.4rem 1.5rem;
     font-size: 1.2rem;
-    margin: 0.5rem 0.5rem;
+    font-weight: bolder;
     position: relative;
-}
-
-.navbar-expand-lg .navbar-nav .nav-link:hover {
-    border-bottom: 4px solid #740a76;
 }
 
 /* .navbar-expand-lg .navbar-nav .nav-link.active {
@@ -67,38 +34,196 @@ a:hover {
     color: #740a76;
 } */
 
-.navbar-nav .btn-a {
-    padding: 0.4rem 1.5rem;
-    font-size: 1.2rem;
-    background-color: #740a76;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    margin: 0.5rem 1rem;
-    position: relative;
-    font-weight: bolder;
-    box-shadow: 0px 0px 2px #740a76;
-}
+/* 
 
-.navbar-nav .btn-a:hover {
+.nav-item .btn-a:hover {
     background-color: #49014b;
     box-shadow: none;
 }
 
-.navbar-nav .btn-b {
-    padding: 0.4rem 1.5rem;
+.nav-item .btn-b {
     font-size: 1.2rem;
     background-color: white;
     color: #740a76;
     border: none;
     border-radius: 5px;
-    margin: 0.5rem 1rem;
     position: relative;
     font-weight: bolder;
     box-shadow: 0px 0px 2px #740a76;
 }
 
-.navbar-nav .btn-b:hover {
+.nav-item .btn-b:hover {
     background-color: rgb(233, 233, 233);
     box-shadow: none;
+}
+
+.btn-a {
+    background-color: #740a76;
+    color: white !important;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    font-weight: bolder;
+    box-shadow: 0px 0px 2px #740a76;
+}
+
+.btn-b {
+    color: #740a76;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    font-weight: bolder;
+}  */
+@media (min-width: 991.98px) {
+  .p-margin-b {
+    margin-bottom: 3rem;
+  }
+
+  .padding-end {
+      padding-right: 3rem;
+  }
+
+}
+
+@media (max-width: 991.98px) {
+  
+
+
+ .hide-dot {
+   display: none;
+ } 
+
+    .reverse {
+      display: flex;
+      flex-wrap: wrap-reverse;
+    }
+
+    .text-justify {
+        text-align: justify;
+    }
+
+    .padding-x {
+        padding: 0 2.5rem;
+        padding-bottom: 1rem;
+    }
+  .btn-margin-b {
+    margin-bottom: 0.8rem;
+  }
+
+  .list-end {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .flex-move-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flex-move {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .text-move {
+    text-align: center;
+  }
+}
+
+html,
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+li {
+  margin: 0 0.5rem;
+}
+
+a {
+  text-decoration: none !important;
+  color: black !important;
+}
+
+a:hover {
+  color: #740a76 !important;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler span {
+  margin: 5px 0;
+  width: 25px;
+  height: 3px;
+  display: block;
+  background: #740a76;
+}
+
+.btn-a {
+  background-color: #740a76;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  position: relative;
+  font-weight: bolder;
+  box-shadow: 0px 0px 1px #740a76;
+}
+
+.btn-b {
+  border: none;
+  border-radius: 5px;
+  position: relative;
+  font-weight: bolder;
+  box-shadow: 0px 0px 3px #740a76;
+}
+
+.border-p {
+  border-radius: 2rem;
+  padding: 0.7rem 1rem;
+  box-shadow: 0 0 3px grey;
+}
+
+.text-purple {
+  color: #740a76 !important;
+}
+
+.bg-purple {
+  background-color: #740a76 !important;
+}
+
+.border-button-a {
+  text-decoration: none;
+  background-color: #740a76;
+  border: 0 solid #740a76;
+  border-radius: 5px;
+  color: white !important;
+}
+
+.border-button-b {
+  text-decoration: none;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.padding-card {
+  padding: 1rem 3rem;
+}
+
+.rounded-x {
+  border-radius: 2rem;
+}
+
+.margin-custom {
+  margin-top: 15vh;
+}
+
+.bg-gradient {
+background: linear-gradient(white, white, #fed6ff) !important;
 }
